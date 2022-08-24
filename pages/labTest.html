@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+    <div class="contact-section">
+        <div class="contact">
+            <div class="contact-form">
+                <form onsubmit="submitForm(event)">
+                    <div class="contact-details">
+                        <h3>1. Your Contact Details</h3>
+                        <div>
+                            <input type="text" required name="name" id="name" placeholder="Full Name">
+                            <input type="text"  name="patient-id" id="patient-id" placeholder="Patient Id if exists">
+                            <input type="number" required name="number" id="number" placeholder="Contact Number">
+                            <input type="email" required name="email" id="email" placeholder="Email Id">
+                        </div>
+                    </div>
+                    <div class="address">
+                        <h3>2. Address</h3>
+                        <div>
+                            <input type="text" name="h-no" id="h-no" placeholder="H-No">
+                            <input type="text" name="street" id="street" placeholder="Street">
+                            <input type="text" name="area" id="area" placeholder="Area">
+                        </div>
+                    </div>
+                    <div class="district">
+                        <h3>4. District</h3>
+                        <div>
+                            <select name="district" id="district">
+                                <option value="">Choose</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="test-type">
+                        <h3>5. Test Type</h3>
+                        <span class="vmessage" id="vmessage">
+                            ! Check atleast one checkbox for submit.
+                        </span>
+                        <div>
+                            <label for="cbc">
+                                <input type="checkbox" name="test" value="cbc" id="cbc">
+                                CBC
+                            </label>
+                            <label for="urine">
+                                <input type="checkbox" name="test" value="urine" id="urine">
+                                Complete Urine
+                            </label>
+                            <label for="lipid-profile">
+                                <input type="checkbox" name="test" value="lipid-profile" id="lipid-profile">
+                                Lipid Profile
+                            </label>
+                            <label for="tsh">
+                                <input type="checkbox" name="test" value="tsh"  id="tsh">
+                                Thyroid Stimulating Hormone(TSH)
+                            </label>
+                            <label for="glucose-test">
+                                <input type="checkbox" name="test" value="glucose-test" id="glucose-test">
+                                Glucose Test
+                            </label>
+                        </div>
+                    </div>
+                    <div class="hard-copy">
+                        <h4>Do you want a hard copy of the report also?</h4>
+                        <div>
+                            <label for="yes">
+                                <input type="radio" name="copy" onchange="isCopy('yes')" value="yes" checked id="yes">
+                                Yes
+                            </label>
+                            <label for="no">
+                                <input type="radio" name="copy" onchange="isCopy('no')" value="no" id="no">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    <div class="comfortable-date">
+                        <h4>Select Your Comfortable Date and Time</h4>
+                        <input type="datetime-local" name="datetime" id="datetime">
+                    </div>
+                    <div class="buttons">
+                        <button type="reset">Reset</button>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contact-image">
+                <img src="../Images/Lab-Test/lab-test.jpg" alt="contact">
+            </div>
+        </div>
+    </div>
+    <script src="./labTest.js"></script>
+</body>
+
+</html>
